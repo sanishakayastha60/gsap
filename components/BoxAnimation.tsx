@@ -18,6 +18,7 @@ export default function BoxAnimation() {
     gsap.from(box2Ref.current, {
       x: 200,
       duration: 1,
+      delay: 2,
       ease: "elastic.out(1,0.3)",
     });
     gsap.fromTo(
