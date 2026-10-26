@@ -13,12 +13,15 @@ export default function BoxAnimation() {
     gsap.to(box1Ref.current, {
       x: 700,
       duration: 1.5,
+      repeat: 2, // kati xoti play garne. yeta 2 means first display paxi 2 xoti repeat hunxa. if its -1 then that means infinitely run the animation.
+      repeatDelay: 1, // repeat garna agi 1 sec wait then do the animation
+      yoyo: true, //backward animation pani lyauxa
       ease: "bounce.out",
     });
     gsap.from(box2Ref.current, {
       x: 200,
       duration: 1,
-      delay: 2,
+      delay: 2, //wait for 2 seconds before starting
       ease: "elastic.out(1,0.3)",
     });
     gsap.fromTo(
